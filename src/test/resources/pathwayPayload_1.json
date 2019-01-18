@@ -1,0 +1,20 @@
+{
+  "/composer|identifier": "9999-9999",
+  "/composer|name": "System",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0002]|value": "VPA system",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0004]|value": "local::at0006|Oral|",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0007]|value": "no specific reason",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0008]|value": "2019-01-01T00:00:00Z",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0009]|value": "2029-01-01T00:00:00Z",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/description[at0001]/items[at0011]|value": "Agreed to share data",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/ism_transition/careflow_step|value": "local::at0015|Informed Consent Provided|",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/ism_transition/current_state|value": "openehr::526|planned|",
+  "/content[openEHR-EHR-ACTION.informed_consent.v0]/time|value": "1900-01-01T00:00:00Z",
+  "/context/health_care_facility|identifier": "123456-123",
+  "/context/health_care_facility|name": "FACILITY",
+  "/context/location": "SYSTEM",
+  "/context/setting": "openehr::238|Other Care|",
+  "/context/start_time": "2019-01-15T10:54:08.961+01:00",
+  "/language": "en",
+  "/territory": "GB"
+}
