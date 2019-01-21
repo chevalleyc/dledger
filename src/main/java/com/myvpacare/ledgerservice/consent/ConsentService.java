@@ -50,13 +50,16 @@ public class ConsentService extends ServiceDataCluster implements I_ConsentServi
         this.global = runTimeSingleton;
         templateId = global.getProperty().get("consent.template.id", "");
         pathwayKey = global.getProperty().get("consent.template.pathwaykey", "");
+
+        schema = global.getProperty().get("consent.db.schema", "ehr");
+
         if (Boolean.parseBoolean(global.getProperty().get("consent.enabled", "false"))) {
             new RLS(this.getDataAccess(), global).enableRLS();
+            //by default all accesses are granted
+            new AllowAllPolicy(schema, getDataAccess(), global).activate();
             useRLS = true;
             log.info("RLS is ACTIVATED");
         }
-
-        schema = global.getProperty().get("consent.db.schema", "ehr");
         //register the service
         global.getServiceRegistry().register(ME + "," + VERSION, this);
         log.info(ME + " Started...");

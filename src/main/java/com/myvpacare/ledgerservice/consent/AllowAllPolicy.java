@@ -27,7 +27,7 @@ public class AllowAllPolicy {
             domainAccess.getContext().query(formatQuery(EHR_ALL)).execute();
             domainAccess.getContext().query(formatQuery(COMPOSITION_ALL)).execute();
         } catch (Exception e) {
-            throw new ServiceManagerException(global, SysErrorCode.USER_SECURITY, "ConsentService", "Couldn't enable policy:" + e);
+//            throw new ServiceManagerException(global, SysErrorCode.USER_SECURITY, "ConsentService", "Couldn't enable policy:" + e);
         }
     }
 
@@ -36,7 +36,7 @@ public class AllowAllPolicy {
             domainAccess.getContext().query(formatQuery(DROP_EHR_ALL)).execute();
             domainAccess.getContext().query(formatQuery(DROP_COMPOSITION_ALL)).execute();
         } catch (Exception e) {
-            throw new ServiceManagerException(global, SysErrorCode.USER_SECURITY, "ConsentService", "Couldn't disable policy:" + e);
+//            throw new ServiceManagerException(global, SysErrorCode.USER_SECURITY, "ConsentService", "Couldn't disable policy:" + e);
         }
     }
 

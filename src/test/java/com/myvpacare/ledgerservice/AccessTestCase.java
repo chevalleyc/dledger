@@ -5,6 +5,8 @@ import com.ethercis.dao.access.support.DummyDataAccess;
 import com.ethercis.ehr.knowledge.I_KnowledgeCache;
 import com.ethercis.ehr.knowledge.KnowledgeCache;
 import com.ethercis.opt.query.I_IntrospectCache;
+import com.ethercis.persistence.RoleControlledSession;
+import com.ethercis.servicemanager.common.def.Constants;
 import com.ethercis.servicemanager.service.test.TestServiceBase;
 import junit.framework.TestCase;
 import org.jooq.DSLContext;

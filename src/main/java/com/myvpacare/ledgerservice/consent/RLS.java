@@ -29,7 +29,7 @@ public class RLS {
 
     /**
      * invoked if consent.enabled == true
-     * At this stage, a default deny all policy is activated to the table.
+     * At this stage, a default allow all policy is activated to the table.
      */
     public void enableRLS() throws ServiceManagerException {
         try {
