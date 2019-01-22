@@ -131,7 +131,7 @@ public class ConsentService extends ServiceDataCluster implements I_ConsentServi
         Boolean result;
 
         try {
-            if (!contributionDescriptionExists(txid)) {
+            if (contributionDescriptionExists(txid)) {
                 I_CompositionAccess compositionAccess = I_CompositionAccess.retrieveInstance(this.getDataAccess(), compositionId);
                 PvCompoHandler pvCompoHandler = new PvCompoHandler(this.getDataAccess(), compositionAccess, templateId, null);
                 result = pvCompoHandler.updateComposition(

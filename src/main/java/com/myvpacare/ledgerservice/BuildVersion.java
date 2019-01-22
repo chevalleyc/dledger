@@ -20,8 +20,8 @@ package com.myvpacare.ledgerservice;/*
  * Created by christian on 07/01/2019.
  */
 public class BuildVersion {
-    public static String projectId = "fhir";
+    public static String projectId = "dledger";
     public static String versionNumber = "1.0-SNAPSHOT";
-    public static String buildDate = "2019-01-10 15:02:45";
+    public static String buildDate = "2019-01-22 14:07:30";
     public static String buildUser = "christian";
 }

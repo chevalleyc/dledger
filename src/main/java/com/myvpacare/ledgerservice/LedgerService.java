@@ -76,6 +76,7 @@ public class LedgerService extends ServiceDataCluster implements I_LedgerService
         UUID ehrId = UUID.fromString(props.getClientProperty(I_CompositionService.EHR_ID, (String) null));
         UUID committerUuid = auditSetter.getCommitterUuid();
         UUID systemUuid = auditSetter.getSystemUuid();
+        //transaction ID is coming from the blockchain
         String txID = props.getClientProperty(TXID, (String) null);
         if (txID == null)
             throw new ServiceManagerException(getGlobal(), SysErrorCode.USER_ILLEGALARGUMENT, ME, "parameter " + TXID + " is required in request");

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>myvpacare.com</groupId>
+    <groupId>com.myvpacare</groupId>
     <artifactId>dledger</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -174,7 +174,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <file>${basedir}/src/main/java/com/myvpacare/fhiretl/BuildVersion.java</file>
+                    <file>${basedir}/src/main/java/com/myvpacare/ledgerservice/BuildVersion.java</file>
                     <replacements>
                         <replacement>
                             <token>projectId = ".*"</token>
@@ -281,6 +281,12 @@
         </dependency>
         <dependency>
             <groupId>ethercis</groupId>
+            <artifactId>ecis-ehr-service</artifactId>
+            <version>1.3.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ethercis</groupId>
             <artifactId>ecis-party-identified-service</artifactId>
             <version>1.3.0-SNAPSHOT</version>
             <scope>test</scope>
@@ -289,6 +295,12 @@
             <groupId>ethercis</groupId>
             <artifactId>ecis-party-identified-service</artifactId>
             <version>1.3.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>myvpacare.com</groupId>
+            <artifactId>dledger</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

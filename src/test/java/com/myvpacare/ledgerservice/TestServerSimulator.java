@@ -24,31 +24,12 @@ public abstract class TestServerSimulator {
 
     @Before
     public void setUp() throws Exception {
-//        launcher.start(new String[]{
-//                "-propertyFile", "resources/services.properties",
-//                "-java_util_logging_config_file", "resources/logging.properties",
-//                "-servicesFile", "resources/services.xml",
-//                "-dialect", "EHRSCAPE",
-//                "-server_port", "8080",
-//                "-server_host", "localhost",
-//                "-debug", "true"
-//        });
-
-//        launcher.start(new String[]{
-//            "-propertyFile", "config/services.properties",
-//            "-java_util_logging_config_file", "config/logging.properties",
-//            "-servicesFile", "config/services.xml",
-//            "-dialect", "EHRSCAPE",
-////            "-server_port", httpPort,
-////            "-server_host", hostname,
-//            "-debug", "true"
-//        });
         launcher = new Launcher();
 
         launcher.start(new String[]{
-                "-propertyFile", "config/services.properties",
-                "-java_util_logging_config_file", "config/logging.properties",
-                "-servicesFile", "config/services.xml",
+                "-propertyFile", "src/test/resources/services.properties",
+                "-java_util_logging_config_file", "src/test/resources/logging.properties",
+                "-servicesFile", "src/test/resources/services.xml",
                 "-dialect", "EHRSCAPE",
 //                "-server_port", httpPort,
 //                "-server_host", hostname,

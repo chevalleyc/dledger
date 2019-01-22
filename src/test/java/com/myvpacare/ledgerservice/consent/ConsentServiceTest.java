@@ -151,7 +151,7 @@ public class ConsentServiceTest extends AccessTestCase {
     @Test
     public void testConsentFor() throws Exception {
 
-        String txid ="1234567890";
+        String txid =UUID.randomUUID().toString();
 
         String jsonPayload = new String(Files.readAllBytes(Paths.get("src/test/resources/consentPayload.json")));
 
@@ -176,7 +176,7 @@ public class ConsentServiceTest extends AccessTestCase {
     @Test
     public void testUpdatePathway() throws Exception {
 
-        String txid ="1234567890";
+        String txid =UUID.randomUUID().toString();
 
         String pathwayPayload = new String(Files.readAllBytes(Paths.get("src/test/resources/pathwayPayload_1.json")));
         String jsonPayload = new String(Files.readAllBytes(Paths.get("src/test/resources/consentPayload.json")));
@@ -188,7 +188,7 @@ public class ConsentServiceTest extends AccessTestCase {
         //load the payload into the CDR
         UUID consentCompositionUUID = consentService.insert(dummyEhrId.toString(), jsonPayload, committer, system, txid);
 
-        Boolean result = consentService.update(consentCompositionUUID, pathwayPayload, committer, system, "Changed pathway");
+        Boolean result = consentService.update(consentCompositionUUID, pathwayPayload, committer, system, txid);
 
         assertTrue(result);
 
